@@ -6,13 +6,21 @@ import java.util.function.UnaryOperator;
 
 public class Desafio {
     public static void main(String[] args) {
-        Produto p = new Produto("iPad", 1000, .10);
 
-        BinaryOperator<Double> precoReal = (preco, desconto) -> preco - (preco * desconto); // 900
-        Function<Double, Double> imposto = valorImposto -> valorImposto >= 900 ? (valorImposto * .10) + valorImposto : valorImposto; // 990 
-        //UnaryOperator<Integer> frete = valorFrete -> valorFrete >= 3000 ? 100 : 50;
-        //Function<Integer, String> frete = valorFrete -> valorFrete >= 3000 ? 100 : 50;
+        Function<Produto, Double> precoFinal = produto -> produto.preco * (1 - produto.desconto);
+        UnaryOperator<Double> impostoMunicipal = preco -> preco >= 2500 ? preco * 1.085 : preco;
+        UnaryOperator<Double> frete = preco -> preco >= 3000 ? preco + 100 : preco + 50;
+        UnaryOperator<Double> arredondar = preco -> Double.parseDouble(String.format(".2f", preco));
+        Function<Double, String> formatar = preco -> ("R$" + preco).replace(".", ",");
 
-        System.out.println(precoReal.andThen(imposto).apply(p.preco, p.desconto));
+        Produto p = new Produto("Carro", 2000000, 0.13);
+        String preco =  precoFinal
+                .andThen(impostoMunicipal)
+                .andThen(frete)
+                .andThen(arredondar)
+                .andThen(formatar)
+                .apply(p);
+
+        System.out.println("Preço final é: " + precoFinal);
     }
 }
