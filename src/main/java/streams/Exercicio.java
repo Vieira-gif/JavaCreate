@@ -18,7 +18,7 @@ public class Exercicio {
         Predicate<Pessoa> masc = pessoa -> pessoa.getSexo().equalsIgnoreCase("Masculino");
         Predicate<Pessoa> feme = pessoa -> pessoa.getSexo().equalsIgnoreCase("Feminino");
 
-        Function<Pessoa, Double> media = Pessoa::getNota;
+        //Function<Pessoa, Double> media = Pessoa::getNota;
 
         List<Pessoa> pessoas = Arrays.asList(p1, p2, p3, p4, p5, p6);
 

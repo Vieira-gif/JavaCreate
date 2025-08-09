@@ -39,9 +39,9 @@ public class Pessoa {
         this.sexo = sexo;
     }
 
-    public Double getNota() {
+    /*public Double getNota() {
         return this.nota.stream().map(Double::valueOf);
-    }
+    }*/
 
     private void setNota(List<Double> nota) {
         this.nota = nota;
