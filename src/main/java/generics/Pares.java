@@ -1,0 +1,8 @@
+package generics;
+
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class Pares<C extends Number, V> {
+    private final SortedSet<Par<C, V>> itens = new TreeSet<>();
+}
