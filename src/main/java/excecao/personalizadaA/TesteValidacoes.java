@@ -4,7 +4,7 @@ import streams.Aluno;
 
 public class TesteValidacoes {
     public static void main(String[] args) {
-        Aluno aluno = new Aluno("Aluno1", -13);
+        /*Aluno aluno = new Aluno("Aluno1", -13);
 
         try {
             Validar.aluno(aluno);
@@ -14,5 +14,8 @@ public class TesteValidacoes {
 
 
         System.out.println("f");
+
+
+         */
     }
 }
