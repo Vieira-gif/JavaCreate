@@ -14,8 +14,8 @@ public class Validar {
             throw new StringNegativoException("nome");
         }
 
-        if ( aluno.nota < 0 || aluno.nota > 10) {
+        /*if ( aluno.nota < 0 || aluno.nota > 10) {
             throw new NumeroNegativoException("nota");
-        }
+        }*/
     }
 }

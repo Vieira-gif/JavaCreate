@@ -3,11 +3,11 @@ package generics;
 public class CaixaObjeto {
     private Object coisa;
 
-    public void setCoisa(Object coisa) {
+    public void guardarCoisa(Object coisa){
         this.coisa = coisa;
     }
 
-    public Object getCoisa() {
+    public Object abrir(){
         return this.coisa;
     }
 }
