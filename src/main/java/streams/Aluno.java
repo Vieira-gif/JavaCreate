@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Aluno {
     public final String nome;
-    final double nota;
+    public final double nota;
 
-    Aluno(String nome, double nota) {
+    public Aluno(String nome, double nota) {
         this.nome = nome;
         this.nota = nota;
     }
