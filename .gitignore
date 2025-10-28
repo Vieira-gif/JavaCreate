@@ -63,3 +63,9 @@ build/
 hs_err_pid*
 replay_pid*
 >>>>>>> aff3f529ed545261fdf25c2c79a9ea882289c966
+
+# DATABASE
+.properties
+db.properties
+src/main/java/db.properties
+src/main/java/jdbc/FabricaConexaoSemSeg.java
